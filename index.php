@@ -62,7 +62,8 @@ foreach($items as $item){
 //membuat variabel dari judul dan deskripsi (bisa juga menggunakan gambar)
 $title = $item->title;
 $description = $item->description;
-
+$tgl=date('l, d-m-Y');
+echo $tgl;
 //menapilkan deskripsi dan judul pada browser Anda
 echo '<p><b>'.$title.'</b><br />'.$description.'</p>';
 }
