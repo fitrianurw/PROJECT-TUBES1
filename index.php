@@ -36,13 +36,13 @@
 <ul>
 <li>Arni Rahmawati<br />
 117006054<br />
-<img src="GAMBAR/tawakal.jpg" width=100px/></li><br />
+<img src="pict/arni.jpg" width=100px/></li><br />
 <li>Fitria Nurwidyawati<br />
 117006067<br />
 <img src="pict/fitria.jpg" width=100px/></li><br />
 <li>Elis<br />
 117006082<br />
-<img src="GAMBAR/shandy.jpg" width=100px/></li><br />
+<img src="pict/elis.jpg" width=100px/></li><br />
 </ul>
 </div>
 <div class="art">
@@ -63,8 +63,10 @@ foreach($items as $item){
 $title = $item->title;
 $description = $item->description;
 
-//menapilkan deskripsi dan judul pada browser Anda
-echo '<p><b>'.$title.'</b><br />'.$description.'</p>';
+//menampilkan deskripsi dan judul pada browser Anda
+echo '<b><li>'.$item->title.'</li></b>'; 
+echo $item->link.'<br>';
+echo $item->description.'<br><br><br>';
 }
 ?>
 </body>
