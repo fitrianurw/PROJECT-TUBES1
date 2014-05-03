@@ -50,7 +50,7 @@
 <br />
 <?php
 // we can specify a localy version or a remote xml as in example
-$xml = simplexml_load_file("http://rss.detik.com/index.php/food");
+$xml = simplexml_load_file("http://www.antara.co.id/rss/news.xml");
 // if I use a local file saved in /tmp directory: $xml = simplexml_load_file("/tmp/podcast.xml");
  
 // now make a XPath selection: select all <item> tag.
@@ -62,11 +62,11 @@ foreach($items as $item){
 //membuat variabel dari judul dan deskripsi (bisa juga menggunakan gambar)
 $title = $item->title;
 $description = $item->description;
-
+$link= $item->link;
+$tgl=date('l, d-m-Y');
+echo $tgl;
 //menampilkan deskripsi dan judul pada browser Anda
-echo '<b><li>'.$item->title.'</li></b>'; 
-echo $item->link.'<br>';
-echo $item->description.'<br><br><br>';
+echo '<p><b>'.$title.'</b><br />'.$description.'<br/>'.$link.'</p>';
 }
 ?>
 </body>
