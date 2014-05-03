@@ -36,13 +36,13 @@
 <ul>
 <li>Arni Rahmawati<br />
 117006054<br />
-<img src="GAMBAR/tawakal.jpg" width=100px/></li><br />
+<img src="pict/arni.jpg" width=100px/></li><br />
 <li>Fitria Nurwidyawati<br />
 117006067<br />
 <img src="pict/fitria.jpg" width=100px/></li><br />
 <li>Elis<br />
 117006082<br />
-<img src="GAMBAR/shandy.jpg" width=100px/></li><br />
+<img src="pict/elis.jpg" width=100px/></li><br />
 </ul>
 </div>
 <div class="art">
@@ -50,7 +50,7 @@
 <br />
 <?php
 // we can specify a localy version or a remote xml as in example
-$xml = simplexml_load_file("http://rss.detik.com/index.php/food");
+$xml = simplexml_load_file("http://www.antara.co.id/rss/news.xml");
 // if I use a local file saved in /tmp directory: $xml = simplexml_load_file("/tmp/podcast.xml");
  
 // now make a XPath selection: select all <item> tag.
@@ -62,9 +62,10 @@ foreach($items as $item){
 //membuat variabel dari judul dan deskripsi (bisa juga menggunakan gambar)
 $title = $item->title;
 $description = $item->description;
+$link= $link->link;
 
-//menapilkan deskripsi dan judul pada browser Anda
-echo '<p><b>'.$title.'</b><br />'.$description.'</p>';
+//menampilkan deskripsi dan judul pada browser Anda
+echo '<p><b>'.$title.'</b><br />'.$description.'<br/>'.$link.'</p>';
 }
 ?>
 </body>
